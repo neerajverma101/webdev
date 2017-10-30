@@ -1,34 +1,130 @@
 <!DOCTYPE html>
 <head>
 <title></title>
-<script src="/assets/jquery.js"></scrip>
+<script src="./assets/jquery.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Extended+Text" rel="stylesheet">
-<!--font-family: 'Libre Barcode 39 Extended Text', cursive;
-
-https://www.ndtv.com/cooks/images/hyderabadi%20biryani%20new.jpg
-
-http://www.wadleighlibrary.org/wp-content/uploads/2017/07/Big-Games-and-Ice-Cream.jpg
-
-http://kblog.s3-ap-southeast-1.amazonaws.com/wp-content/uploads/2016/05/24122940/Paneer-Tikka-Recipe6.jpg
-
-
-
--->
-<link href="/assets/normalize.css" rel="stylesheet" type="text/css">
-<style></style>
+<link href="./assets/normalize.css" rel="stylesheet" type="text/css">
+<style>
+body{
+	background:#131313;
+	margin:0 auto;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	max-width:600px;
+	}
+h1{
+	font-family:'Libre Barcode 39 Extended Text', cursive;
+	text-align:center;
+	color:#CECECE;
+	font-size:75px;
+	margin:70px 0 0 0;
+	}
+h2{
+	color:#606060;
+	text-align:center;
+	font-size:36px;
+	margin:0 0 70px 0;
+	}
+div{
+	height:200px;
+	margin:40px 0 0 0;
+	position:relative;
+	border-radius:12px;
+	background-size:cover;
+	background-position:center;
+	}
+p{
+	position:absolute;
+	bottom:0;
+	margin:0;
+	color:white;
+	text-align:justify;
+	padding:10px;
+	height:28px;
+	line-height:28px;
+	background:black;
+	background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+	background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+    background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+	transition:height 1s;
+    -webkit-transition:height 1s;
+    -moz-transition:height 1s;
+	}
+small{
+	opacity:0;
+	}
+.starter{
+	background-image:url(img/paneertikka.jpg);
+	}
+.maincourse{
+	background-image:url(img/chickenbiryani.jpg);
+	}
+.dessert{
+	background-image:url(img/icecream.jpg);
+	}
+.drinks{
+	background-image:url(img/drinks.jpg);
+	}
+.price{
+	float:right;
+	}
+.description p{
+	height:150px;
+	}
+.description small{
+	opacity:1;
+	}
+@media(max-width:500px){
+  h1{
+    font-size:50px;
+    margin-top:20px;
+    line-height:40px;
+    }
+  h2{
+    font-size:20px;
+    margin:20px 0 30px 0;
+    }
+  div{
+    margin:20px 12px 0 12px;
+    }
+  p{
+    font-size:20px;
+    line-height:24px;
+    }
+  small{
+    font-size:16px;
+    }
+  }
+</style>
 </head>
 <body>
-<h1>MY RESTO
+<h1>MY RESTO</h1>
 <h2>.eatery.drinks.</h2>
-</h1>
-<div>
-<small><small>
-</div>
-<div>
 
+<div class="starter">
+<p>Paneer Tikka <span class="price">Rs.149/-</span><br/>
+<small>Chunks of paneer, a type of fresh cheese, are marinated in spices and are then arranged on a stick with capsicums, onions and tomatoes. These sticks are grilled in a tandoor and the dish is thereafter served hot, seasoned with lemon juice and chaat masala. It is sometimes accompanied by salad or mint chutney. </small>
+</p>
 </div>
-<div>
-
+<div class="maincourse">
+<p>Chicken Biryani <span class="price">Rs.299/-</span><br/>
+<small>A world-renowned Indian dish, biryani takes time and practice to make but is worth every bit of the effort. Long-grained basmati rice flavored with exotic spices such as saffron is layered with lamb, chicken, fish, or vegetables cooked in a thick gravy. The dish is then covered, its lid sealed on with dough and the biryani is cooked on a low flame.</small>
+</p>
 </div>
+<div class="dessert">
+<p>Brownies
+<small>A chocolate brownie is a square, baked, chocolate dessert. Brownies come in a variety of forms and may be either fudgy or cakey, depending on their density. They include nuts, frosting, cream cheese, chocolate chips, or other ingredients.</small>
+</p>
+</div>
+<div class="drinks">
+<p>Drinks <span class="price">Rs.499*/-</span><br/>
+<small>
+.ouzo.sambuca.schnaps.baijiu.sake.cachaca.absinthe.beer.gin.vodka.rum.whiskey.tequila.brandy.red wine.white wine.rose wine.champagne.sparkling wine.vermouth.</small>
+</p>
+</div>
+<script>
+$("div").on("click", function(){
+	$(this).toggleClass("description");
+	});
+</script>
 </body>
 
